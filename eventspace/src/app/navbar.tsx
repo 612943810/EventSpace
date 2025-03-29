@@ -11,6 +11,11 @@ export default function Navbar() {
             EventSpace
           </Link>
           <ul className="flex space-x-4">
+            <li>
+              <Link href="/" className="text-gray-300 hover:text-white">
+                Home
+              </Link>
+            </li>
                <li>
               <Link href="/about" className="text-gray-300 hover:text-white">
                 About
@@ -25,11 +30,6 @@ export default function Navbar() {
           </ul>
         </div>
       </nav>
-      <main>
-        <h1 className="text-3xl font-bold underline bg-blue-700 text-yellow-400 list-none">
-          Hello world!
-        </h1>
-      </main>
     </div>
   );
 }
