@@ -11,10 +11,7 @@ function About() {
         <div className="prose max-w-none">
           <h2 className="text-2xl font-semibold text-secondary">Our Mission</h2>
           <p>
-            At EventSpace, our mission is to connect people with unforgettable
-            experiences. We believe that events are more than just gatherings;
-            they're opportunities to create memories, build connections, and
-            celebrate life's special moments.
+          EventSpace is platform for Torontonians to view theikr local events. Wher
           </p>
           <p>
             Whether you're looking for a music festival, a local workshop, a

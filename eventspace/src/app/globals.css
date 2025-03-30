@@ -1,17 +1,13 @@
-@import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+ --tangelo: #f6511dff;
+  --hunyadi-yellow: #f6bd60ff;
+  --barn-red: #720e07ff;
+  --light-sea-green: #20a39eff;
+  --celestial-blue: #058ed9ff;
 }
 
-@theme {
-  --color-tangelo: #f6511dff;
-  --color-hunyadi-yellow: #f6bd60ff;
-  --color-barn-red: #720e07ff;
-  --color-light-sea-green: #20a39eff;
-  --color-celestial-blue: #058ed9ff;
-}
+ 
+
 
 @media (prefers-color-scheme: dark) {
   :root {

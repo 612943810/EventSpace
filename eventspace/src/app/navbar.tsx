@@ -12,17 +12,17 @@ export default function Navbar() {
           </Link>
           <ul className="flex space-x-4">
             <li>
-              <Link href="/" className="text-gray-300 hover:text-white">
+              <Link href="/" className="text-hunyadi-yellow hover:text-white">
                 Home
               </Link>
             </li>
                <li>
-              <Link href="/about" className="text-gray-300 hover:text-white">
+              <Link href="/about" className="text-hunyadi-yellow hover:text-white">
                 About
               </Link>
             </li> 
             <li>
-              <Link href="/events" className="text-gray-300 hover:text-white">
+              <Link href="/events" className="text-hunyadi-yellow hover:text-white">
                 Events
               </Link>
             </li>
