@@ -1,14 +1,15 @@
 import { useState } from 'react';
-import { Event } from '../types/event';
+import { Event, EventFilters } from '../types/event';
 import EventCard from './EventCard';
 import EventDetails from './EventDetails';
 import '../styles/EventList.css';
 
 interface EventListProps {
   events: Event[];
+  filters: EventFilters;
 }
 
-const EventList = ({ events }: EventListProps) => {
+const EventList = ({ events, filters }: EventListProps) => {
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
 
   const handleEventClick = (id: string) => {
@@ -30,15 +31,24 @@ const EventList = ({ events }: EventListProps) => {
           <p>Try adjusting your filters or search criteria</p>
         </div>
       ) : (
-        <div className="event-list">
-          {events.map(event => (
-            <EventCard 
-              key={event.id} 
-              event={event} 
-              onClick={handleEventClick} 
-            />
-          ))}
-        </div>
+        <>
+          <div className="event-list-header">
+            <p className="filter-summary">
+              {filters.category !== 'All' && `Category: ${filters.category} • `}
+              {filters.searchTerm && `Search: "${filters.searchTerm}" • `}
+              Sorted by: {filters.sortBy.charAt(0).toUpperCase() + filters.sortBy.slice(1)}
+            </p>
+          </div>
+          <div className="event-list">
+            {events.map(event => (
+              <EventCard 
+                key={event.id} 
+                event={event} 
+                onClick={handleEventClick} 
+              />
+            ))}
+          </div>
+        </>
       )}
 
       {selectedEvent && (
